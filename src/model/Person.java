@@ -1,14 +1,30 @@
-package iterableCollection;
+package model;
+
+import java.util.List;
 
 public class Person {
     private int id;
     private String name;
     private String city;
+    private List<String> hobbies;
+
+    public Person(String name, List<String> hobbies) {
+        this.name = name;
+        this.hobbies = hobbies;
+    }
 
     public Person(int id, String name, String city) {
         this.id = id;
         this.name = name;
         this.city = city;
+    }
+
+    public List<String> getHobbies() {
+        return hobbies;
+    }
+
+    public void setHobbies(List<String> hobbies) {
+        this.hobbies = hobbies;
     }
 
     public int getId() {
@@ -41,6 +57,7 @@ public class Person {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", city='" + city + '\'' +
+                ", hobbies=" + hobbies +
                 '}';
     }
 }
