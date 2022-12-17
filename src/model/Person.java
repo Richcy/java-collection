@@ -8,6 +8,10 @@ public class Person {
     private String city;
     private List<String> hobbies;
 
+    public Person(String name) {
+        this.name = name;
+    }
+
     public Person(String name, List<String> hobbies) {
         this.name = name;
         this.hobbies = hobbies;
